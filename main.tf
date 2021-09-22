@@ -1,7 +1,5 @@
 provider "aws" {
   region = "eu-west-2"
-  access_key = "AKIAQFUTGDJOFFYTSFW6"
-  secret_key = "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"
 }
 variable "cidr_blocks" {
   description = "cidr blocks and name tags for vpc and subnets"
