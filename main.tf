@@ -1,6 +1,7 @@
 provider "aws" {
   region = "eu-west-2"
 }
+
 variable "cidr_blocks" {
   description = "cidr blocks and name tags for vpc and subnets"
   # type = list(string)
@@ -9,7 +10,6 @@ variable "cidr_blocks" {
     name = string
   }))
 }
-
 
 resource "aws_vpc" "development-vpc" {
   cidr_block = var.cidr_blocks[0].cidr_block
